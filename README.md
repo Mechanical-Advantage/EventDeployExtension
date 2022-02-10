@@ -14,10 +14,10 @@ To install, clone the repository to the VSCode extensions folder.
 
 ### macOS/Linux
 ```
-git clone 'https://github.com/Mechanical-Advantage/EventDeployExtension.git' ~/.vscode/extensions/EventDeployExtension
+git clone "https://github.com/Mechanical-Advantage/EventDeployExtension.git" ~/.vscode/extensions/EventDeployExtension
 ```
 
 ### Windows
 ```
-git clone 'https://github.com/Mechanical-Advantage/EventDeployExtension.git' %userprofile%\.vscode\extensions\EventDeployExtension
+git clone "https://github.com/Mechanical-Advantage/EventDeployExtension.git" %userprofile%\.vscode\extensions\EventDeployExtension
 ```
