@@ -1,0 +1,61 @@
+{
+	"name": "event-deploy",
+	"displayName": "Event Deploy for WPILib",
+	"description": "Adds a button to commit all changes when deploying robot code at events.",
+	"version": "0.0.1",
+	"author": "FRC 6328",
+	"publisher": "FRC 6328",
+	"license": "MIT",
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"workspaceContains:.wpilib/wpilib_preferences.json"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "event-deploy.deploy",
+				"title": "Deploy Robot Code (Event)",
+				"category": "WPILib",
+				"enablement": "isWorkspaceTrusted"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "event-deploy.deploy",
+					"when": "isWPILibProject"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "event-deploy.deploy",
+					"group": "wpilib@0",
+					"when": "isWPILibProject"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.51.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	}
+}
