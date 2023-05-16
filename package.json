@@ -1,5 +1,5 @@
 {
-	"name": "event-deploy",
+	"name": "event-deploy-wpilib",
 	"displayName": "Event Deploy for WPILib",
 	"description": "Adds a button to commit all changes when deploying robot code at events.",
 	"version": "0.0.1",
@@ -21,7 +21,7 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "event-deploy.deploy",
+				"command": "event-deploy-wpilib.deploy",
 				"title": "Deploy Robot Code (Event)",
 				"category": "WPILib",
 				"enablement": "isWorkspaceTrusted"
@@ -30,13 +30,13 @@
 		"menus": {
 			"commandPalette": [
 				{
-					"command": "event-deploy.deploy",
+					"command": "event-deploy-wpilib.deploy",
 					"when": "isWPILibProject"
 				}
 			],
 			"editor/title": [
 				{
-					"command": "event-deploy.deploy",
+					"command": "event-deploy-wpilib.deploy",
 					"group": "wpilib@0",
 					"when": "isWPILibProject"
 				}
