@@ -4,7 +4,7 @@
 	"description": "Adds a button to commit all changes when deploying robot code at events.",
 	"version": "0.0.1",
 	"author": "FRC 6328",
-	"publisher": "FRC 6328",
+	"publisher": "Mechanical-Advantage",
 	"license": "MIT",
 	"icon": "icon.png",
 	"repository": "github:Mechanical-Advantage/EventDeployExtension",
