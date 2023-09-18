@@ -10,7 +10,9 @@ An example commit message is shown below.
 
 ## Installation
 
-To install, clone the repository to the VSCode extensions folder.
+The extension can be installed from the VSCode marketplace: https://marketplace.visualstudio.com/items?itemName=Mechanical-Advantage.event-deploy-wpilib
+
+Alternatively, it can be installed by cloning the repository to the VSCode extensions folder.
 
 ### macOS/Linux
 
