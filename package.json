@@ -2,7 +2,7 @@
 	"name": "event-deploy-wpilib",
 	"displayName": "Event Deploy for WPILib",
 	"description": "Adds a button to commit all changes when deploying robot code at events.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "FRC 6328",
 	"publisher": "Mechanical-Advantage",
 	"license": "MIT",
