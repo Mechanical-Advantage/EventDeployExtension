@@ -23,16 +23,22 @@ function activate(context) {
         if (!branch.startsWith(branchPrefix)) {
           vscode.window.showErrorMessage(
             'Current branch "' +
-              branch.trim() +
-              '" is not a valid event branch.'
+            branch.trim() +
+            '" is not a valid event branch.'
           );
         } else {
           var commitMessage = 'Update at "' + new Date().toLocaleString() + '"';
-
-          runCommand("git add -A", () => {
-            runCommand("git commit -m '" + commitMessage + "'", () => {
+          runCommand("git status -s", (status) => {
+            if (status.length !== 0) {
+              runCommand("git add -A", () => {
+                runCommand("git commit -m '" + commitMessage + "'", () => {
+                  vscode.commands.executeCommand("wpilibcore.deployCode");
+                });
+              });
+            } else {
+              vscode.window.showInformationMessage("No new changes to commit");
               vscode.commands.executeCommand("wpilibcore.deployCode");
-            });
+            }
           });
         }
       });
@@ -42,7 +48,7 @@ function activate(context) {
 // @ts-ignore
 exports.activate = activate;
 
-function deactivate() {}
+function deactivate() { }
 
 module.exports = {
   activate,
