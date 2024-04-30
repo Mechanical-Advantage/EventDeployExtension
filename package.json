@@ -40,6 +40,13 @@
 					"group": "wpilib@0",
 					"when": "isWPILibProject"
 				}
+			],
+			"explorer/context": [
+				{
+					"when": "resourceFilename == build.gradle && isWPILibProject",
+					"command": "event-deploy-wpilib.deploy",
+					"group": "wpilib@0"
+				}
 			]
 		}
 	},
