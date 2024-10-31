@@ -1,3 +1,6 @@
+> [!IMPORTANT]  
+> This extension is deprecated. Users should set up a Gradle task to accomplish the same function, as documented [here](https://docs.advantagekit.org/installation/version-control#event-deploy).
+
 # Event Deploy for WPILib
 
 A VSCode extension for quickly committing all changes before deploying robot code. Click "Deploy Robot Code (Event)" in the editor menu. The current branch _must_ begin with "event" (e.g. "event_nhgrs"). After an event, these commits can be squashed and merged to another branch.
