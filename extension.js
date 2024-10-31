@@ -27,12 +27,10 @@ function activate(context) {
               '" is not a valid event branch.'
           );
         } else {
-          var commitMessage = 'Update at "' + new Date().toLocaleString() + '"';
-
-          runCommand("git add -A", () => {
-            runCommand("git commit -m '" + commitMessage + "'", () => {
+          var escapedCommitMessage = '"Deploy at \\"' + new Date().toLocaleString() + '\\""';
+          var gitAddAndCommitCommand = 'git commit -a -m ' + escapedCommitMessage;
+          runCommand(gitAddAndCommitCommand, () => {
               vscode.commands.executeCommand("wpilibcore.deployCode");
-            });
           });
         }
       });
@@ -40,7 +38,7 @@ function activate(context) {
   );
 }
 // @ts-ignore
-exports.activate = activate;
+//exports.activate = activate;
 
 function deactivate() {}
 
